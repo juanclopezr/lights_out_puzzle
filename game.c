@@ -34,21 +34,20 @@ int main()
       printf("\nEnter row:");
       while((c = getchar()) != '\n' && row != EOF)
 	{
-	  row = c;
-	  printf("\n%u",row);
+	  row = c-'0';
 	}
 
       int column;
       printf("\nEnter column:");
-      while((column = getchar()) != '\n' && column != EOF)
+      while((c = getchar()) != '\n' && c != EOF)
 	{
+	  column = c-'0';
 	}
       printf("\ncolumn");
       putchar(column);
 
       for(int i=0;i<64;i++)
 	{
-	  printf("\n%u",row);
 	  pattern[i] = pattern[i]^moves[8*row+column][i];
 	  temp = temp||pattern[i];
 	}
