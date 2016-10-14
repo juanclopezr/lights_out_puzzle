@@ -32,7 +32,7 @@ int main()
       int row;
       char c;
       printf("\nEnter row:");
-      while((c = getchar()) != '\n' && row != EOF)
+      while((c = getchar()) != '\n' && c != EOF)
 	{
 	  row = c-'0';
 	}
